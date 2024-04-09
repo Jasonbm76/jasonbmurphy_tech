@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    min-width: 200px;
+    padding: 0;
+    margin: 0;
+    border-right: solid 1px rgba(255, 255, 255, 0.2);
+
+    h1 {
+      display: flex;
+      align-self: center;
+      text-transform: uppercase;
+      line-height: inherit;
+      display: flex;
+      font-size: inherit;
+      font-weight: bolder;
+      font-size: 12px;
+
+      a {
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .topNav {
+    //margin-left: auto;
+    width: 100%;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+      justify-items: space-between;
+      gap: 20px;
+
+      li {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        //border-left: 1px solid #a0a0a04d;
+        line-height: 1;
+
+        // &:first-child {
+        //   //border: none;
+        // }
+
+        a {
+          padding: 0;
+        }
+      }
+
+      span:after {
+        content: '|';
+        opacity: 0.5;
+      }
+    }
+  }
+}
