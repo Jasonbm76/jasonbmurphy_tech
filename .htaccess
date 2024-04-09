@@ -1,8 +1,9 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(www.)?jasonmurphy.tech$
-RewriteCond %{REQUEST_URI} !^/jasonmurphy_tech/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /jasonmurphy_tech/$1
-RewriteCond %{HTTP_HOST} ^(www.)?jasonmurphy.tech$
-RewriteRule ^(/)?$ index.html [L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule> 
