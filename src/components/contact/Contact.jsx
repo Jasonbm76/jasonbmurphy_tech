@@ -31,27 +31,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // const name = e.target.name.value;
-    // const email = e.target.email.value;
-    // const message = e.target.message.value;
-
-    // const emailForm = { from_name: name, email_id: email, message: message };
-
-    // const mailOptions = {
-    //   from: 'jasonbm76@gmail.com',
-    //   to: email,
-    //   name: name,
-    //   text: message,
-    // };
-
-    /*
-    emailjs.send("service_ijwrfcd","template_euwfa49",{
-    name: "Jason B Murphy",
-    message: "Testing new message",
-    reply_to: "jasonbm76@gmail.com",
-    });
-    */
-
     emailjs
       .sendForm('service_ijwrfcd', 'template_euwfa49', form.current, {
         publicKey: 'XQ9kFF5BwgvXh4hOB',
@@ -76,7 +55,7 @@ const Contact = () => {
       </Typography>
 
       <Typography variant="body1" component="p" className="lead">
-        Something witty?
+        Have a question or want to work together? Feel free to send me a message!
       </Typography>
 
       <Divider className="horizontal-divider" />
