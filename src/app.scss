@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 html {
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   background-color: #f4f5f5;
 }
@@ -55,6 +55,10 @@ p {
   color: #989898;
   font-size: 13px;
 
+  @media (max-width: 899px) {
+    font-size: 14px;
+  }
+
   &.lead {
     letter-spacing: 0.25em;
     text-transform: uppercase;
@@ -77,6 +81,10 @@ section {
     padding: 100px 50px 15px;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 899px) {
+      padding: 50px 25px 15px;
+    }
 
     a {
       border-bottom: 1px dotted #a0a0a0a6;

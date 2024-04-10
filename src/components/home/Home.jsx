@@ -14,84 +14,42 @@ import { motion } from 'framer-motion';
 import './home.scss';
 
 function Home() {
-  const learnMoreClick = () => {
-    window.location.href = '#about';
-  };
-
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
-      <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
-        <Grid container>
-          <Grid item xs={12} sm={4} className="sectionContent-left intro">
-            <a className="photo" href="/">
-              <img src="/jason.jpeg" alt="Photo of Jason" />
-            </a>
-
-            <Typography variant="h2" component="h2" className="intro-name">
-              Jason Murphy
-            </Typography>
-            <Typography variant="body1" component="p" className="email-info">
-              <EmailOutlinedIcon className="email-icon" />
-              <a href="mailto:jasonbm76@gmail.com" title="Send me an email" className="email-link">
-                jasonbm76@gmail.com
-              </a>
-            </Typography>
-
-            {/* <Divider className="horizontal-divider" /> */}
-
-            <Typography variant="h6" component="h6" className="briefly">
-              Briefly
-            </Typography>
-
-            <Typography variant="body1" component="p" className="briefly-content">
-              Hey there, my name is Jason and I&apos;m a Senior Software Engineer / Front End Expert. I&apos;m passionate about creating pixel-perfect,
-              beautiful, responsive, and accessible websites.
-            </Typography>
-
-            <Button variant="outlined" className="learn-more" onClick={learnMoreClick}>
-              Learn More
-            </Button>
-          </Grid>
-
-          <Grid item sm={8} className="sectionContent-right home">
-            <Typography variant="h2" component="h2">
-              About this site
-            </Typography>
-            <Typography variant="body1" component="p" className="lead">
-              This site was built with React, Material-UI, SASS, and Framer Motion. It is a single-page application with a responsive design and accessible
-              content.
-            </Typography>
-            <Divider className="horizontal-divider" />
-            <Typography variant="body1" component="p" className="welcome">
-              Welcome to my website. Here you can learn{' '}
-              <a href="#about" title="About Me">
-                about me
-              </a>
-              , view{' '}
-              <a href="#resume" title="View My Resume">
-                my resume
-              </a>
-              , see{' '}
-              <a href="#projects" title="View My Projects">
-                my projects
-              </a>
-              , and{' '}
-              <a href="#contact" title="Contact Me">
-                contact me
-              </a>
-              . Feel free to explore the site and reach out.
-            </Typography>
-            <Typography variant="body1" component="p" className="welcome">
-              Source available{' '}
-              <a href="https://github.com/Jasonbm76/jasonmurphy_tech" title="View my Github link" target="_blank" rel="noreferrer">
-                here
-              </a>
-              .
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
-    </motion.div>
+    <div>
+      <Typography variant="h2" component="h2">
+        About this site
+      </Typography>
+      <Typography variant="body1" component="p" className="lead">
+        This site was built with React, Material-UI, SASS, and Framer Motion. It is a single-page application with a responsive design and accessible content.
+      </Typography>
+      <Divider className="horizontal-divider" />
+      <Typography variant="body1" component="p" className="welcome">
+        Welcome to my website. Here you can learn{' '}
+        <a href="#about" title="About Me">
+          about me
+        </a>
+        , view{' '}
+        <a href="#resume" title="View My Resume">
+          my resume
+        </a>
+        , see{' '}
+        <a href="#projects" title="View My Projects">
+          my projects
+        </a>
+        , and{' '}
+        <a href="#contact" title="Contact Me">
+          contact me
+        </a>
+        . Feel free to explore the site and reach out.
+      </Typography>
+      <Typography variant="body1" component="p" className="welcome">
+        GitHub source available{' '}
+        <a href="https://github.com/Jasonbm76/jasonmurphy_tech" title="View my Github link" target="_blank" rel="noreferrer">
+          here
+        </a>
+        .
+      </Typography>
+    </div>
   );
 }
 

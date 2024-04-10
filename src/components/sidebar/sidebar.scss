@@ -1,0 +1,58 @@
+h2 {
+  margin-top: 1em;
+}
+
+h6 {
+  margin-top: 20px;
+}
+
+.briefly {
+  margin-top: 30px;
+}
+
+.briefly-content {
+  letter-spacing: 0;
+
+  @media (max-width: 899px) {
+    font-size: 14px;
+  }
+}
+
+.email-info {
+  display: flex;
+  align-items: center;
+}
+
+.email-icon {
+  width: 15px !important;
+  margin-right: 10px;
+}
+
+.email-link {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+
+  &:hover {
+    color: #2e59ba;
+  }
+}
+
+.learn-more {
+  max-width: 150px;
+  font-size: 10px !important;
+  padding: 10px !important;
+  margin-top: 15px !important;
+}
+
+.photo {
+  width: 160px;
+  height: 160px;
+
+  img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    width: 10em;
+  }
+}
