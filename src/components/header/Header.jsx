@@ -6,18 +6,10 @@ import Typography from '@mui/material/Box';
 import React from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import Divider from '@mui/material/Divider';
 
 const Links = ['about', 'resume', 'projects', 'contact'];
-
-const LinkItem = ({ href, title }) => {
-  return (
-    <li>
-      <motion.a href={href} title={title} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
-        {title}
-      </motion.a>
-    </li>
-  );
-};
 
 const Spacer = () => {
   return <Box component="span" sx={{ mx: 1 }} />;
@@ -25,6 +17,20 @@ const Spacer = () => {
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(false);
+  };
+
+  const LinkItem = ({ href, title }) => {
+    return (
+      <li>
+        <a href={href} title={title} onClick={() => handleClick()}>
+          {title}
+        </a>
+      </li>
+    );
+  };
 
   return (
     <header>
@@ -44,22 +50,30 @@ const Header = () => {
 
           <div className="mobileNavMenu" style={{ display: isOpen ? 'block' : 'none' }}>
             <ul>
+              <LinkItem href="#" title="Home" />
+              <Divider component="li" />
               {Links.map((link, index) => (
                 <React.Fragment key={`spacer-${index}`}>
                   <LinkItem href={`#${link}`} title={link} key={index} />
+                  <Divider component="li" />
                 </React.Fragment>
               ))}
             </ul>
           </div>
         </div>
-        <ul className="desktopNavMenu">
+
+        <motion.ul className="desktopNavMenu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+          <Link href="#" title="Home" color="inherit">
+            <HomeOutlinedIcon />
+          </Link>
+          <Spacer />
           {Links.map((link, index) => (
             <React.Fragment key={`spacer-${index}`}>
               <LinkItem href={`#${link}`} title={link} key={index} />
               <Spacer key={`spacer-${index}`} />
             </React.Fragment>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </header>
   );

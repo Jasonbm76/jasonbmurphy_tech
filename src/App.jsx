@@ -16,20 +16,31 @@ const App = () => {
   return (
     <React.Fragment>
       <Container maxWidth="xl" disableGutters>
-        <Box component="section">
+        <Box component="section" id="home">
           <Header />
+          <Box component="main" className="sectionContent">
+            Home Contents
+          </Box>
         </Box>
         <Box component="section" id="about">
-          About
+          <Box component="main" className="sectionContent">
+            About Contents
+          </Box>
         </Box>
         <Box component="section" id="resume">
-          Resume
+          <Box component="main" className="sectionContent">
+            Resume Contents
+          </Box>
         </Box>
         <Box component="section" id="projects">
-          Projects
+          <Box component="main" className="sectionContent">
+            Projects Contents
+          </Box>
         </Box>
         <Box component="section" id="contact">
-          Contact
+          <Box component="main" className="sectionContent">
+            Contact Contents
+          </Box>
         </Box>
       </Container>
     </React.Fragment>

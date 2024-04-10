@@ -7,13 +7,15 @@ header {
   align-items: center;
   // background-color: rgba(0, 0, 0, 0.5);
   background-color: #fefeff;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-optical-sizing: auto;
   font-size: 12px;
   letter-spacing: 5px;
+  position: fixed;
+  color: #3c3b3b;
 
   .logoContainer {
     display: flex;
@@ -23,7 +25,11 @@ header {
     min-width: 200px;
     padding: 0;
     margin: 0;
-    border-right: solid 1px rgba(255, 255, 255, 0.2);
+    border-right: solid 1px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 899px) {
+      border: none;
+    }
 
     h1 {
       display: flex;
@@ -33,7 +39,7 @@ header {
       display: flex;
       font-size: 13px;
       font-weight: 900;
-      color: #3c3b3b;
+      color: inherit;
 
       a {
         font-weight: bolder;
@@ -62,20 +68,20 @@ header {
         // flex-direction: column;
         // gap: 20px;
         display: fixed;
-        width: 200px;
+        width: 150px;
         height: 100vh;
         position: absolute;
-        top: 57px;
+        top: 55px;
         bottom: 0;
         right: 0;
         border-left: solid 1px rgba(0, 0, 0, 0.2);
         background-color: #fefeff;
-        padding: 10px;
+        padding: 10px 15px;
 
         ul {
           list-style: none;
           margin: 0;
-          padding-left: 30px;
+          padding: 0;
           display: block;
           // display: flex;
           // align-items: center;
@@ -85,7 +91,7 @@ header {
           li {
             width: 100%;
             display: block;
-            line-height: 20px;
+            line-height: 30px;
             text-transform: uppercase;
           }
         }
@@ -110,6 +116,7 @@ header {
 
           a {
             padding: 0;
+            color: inherit;
           }
 
           a:hover {
