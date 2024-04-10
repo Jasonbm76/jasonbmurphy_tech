@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-  color: #2e59ba;
+  color: #2e59ba !important;
 }
 
 h1,
@@ -58,6 +58,8 @@ p {
   &.lead {
     letter-spacing: 0.25em;
     text-transform: uppercase;
+    line-height: 2em;
+    // width: 85%;
   }
 }
 
