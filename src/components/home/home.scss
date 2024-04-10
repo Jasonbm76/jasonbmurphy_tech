@@ -1,0 +1,16 @@
+h2 {
+  margin-top: 1em;
+}
+
+.photo {
+  width: 160px;
+  height: 160px;
+
+  img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    width: 10em;
+  }
+}

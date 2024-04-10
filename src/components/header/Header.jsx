@@ -2,7 +2,6 @@ import './header.scss';
 import { motion } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import Typography from '@mui/material/Box';
 import React from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
@@ -37,7 +36,7 @@ const Header = () => {
       <div className="logoContainer">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
           <h1>
-            <a href="#" title="Jason Murphy">
+            <a href="#" title="JASON MURPHY">
               Jason Murphy
             </a>
           </h1>
@@ -46,7 +45,7 @@ const Header = () => {
 
       <div className="topNav">
         <div className="hamburgerMenu">
-          <Hamburger toggled={isOpen} size={20} toggle={setOpen} label="Show Menu" />
+          <Hamburger toggled={isOpen} size={16} toggle={setOpen} label="Show Menu" />
 
           <div className="mobileNavMenu" style={{ display: isOpen ? 'block' : 'none' }}>
             <ul>
@@ -54,7 +53,7 @@ const Header = () => {
               <Divider component="li" />
               {Links.map((link, index) => (
                 <React.Fragment key={`spacer-${index}`}>
-                  <LinkItem href={`#${link}`} title={link} key={index} />
+                  <LinkItem href={`#${link}`} title={link.toUpperCase()} key={index} />
                   <Divider component="li" />
                 </React.Fragment>
               ))}
@@ -63,13 +62,15 @@ const Header = () => {
         </div>
 
         <motion.ul className="desktopNavMenu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
-          <Link href="#" title="Home" color="inherit">
-            <HomeOutlinedIcon />
-          </Link>
+          <li>
+            <Link href="#" title="Home" className="homeIcon">
+              <HomeOutlinedIcon />
+            </Link>
+          </li>
           <Spacer />
           {Links.map((link, index) => (
             <React.Fragment key={`spacer-${index}`}>
-              <LinkItem href={`#${link}`} title={link} key={index} />
+              <LinkItem href={`#${link}`} title={link.toUpperCase()} key={index} />
               <Spacer key={`spacer-${index}`} />
             </React.Fragment>
           ))}
