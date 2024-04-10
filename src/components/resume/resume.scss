@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.resume-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .resume-divider {
+    margin: 50px 0;
+  }
+
+  .resume-content-middle {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .resume-content-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+
+    .logo {
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  .resume-content-right {
+    h6 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    &.education {
+      margin-left: 50px;
+    }
+
+    &.education:last-of-type {
+      margin-top: 20px;
+    }
+
+    ul.resume-bullet-points {
+      font-size: 13px;
+      margin-top: 10px;
+
+      li {
+        margin-left: 15px;
+        margin-bottom: 10px;
+        color: #989898;
+      }
+    }
+  }
+}

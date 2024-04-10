@@ -11,7 +11,7 @@ import Header from './components/header/Header';
 import './app.scss';
 
 import Home from './components/home/Home';
-import Sidebar from './components/sidebar/Sidebar';
+import SidebarHome from './components/sidebars/SidebarHome';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
@@ -31,7 +31,7 @@ const App = () => {
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro">
-                  <Sidebar />
+                  <SidebarHome />
                 </Grid>
                 <Grid item sm={8} className="sectionContent-right home">
                   <Home />
