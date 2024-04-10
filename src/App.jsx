@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
@@ -22,6 +22,17 @@ import Resume from './components/resume/Resume';
 // };
 
 const App = () => {
+  const refHome = useRef(null);
+  const refAbout = useRef(null);
+  const refResume = useRef(null);
+  const refProjects = useRef(null);
+  const refContact = useRef(null);
+  const isHomeInView = useInView(refHome, { once: true });
+  const isAboutInView = useInView(refAbout, { once: true });
+  const isResumeInView = useInView(refResume, { once: true });
+  const isProjectsInView = useInView(refProjects, { once: true });
+  const isContactInView = useInView(refContact, { once: true });
+
   return (
     <React.Fragment>
       <div className="background-mountains">
@@ -29,9 +40,15 @@ const App = () => {
       </div>
 
       <Container maxWidth="xl" disableGutters className="mainContainer">
-        <Box component="section" id="home">
+        <Box component="section" id="home" ref={refHome}>
           <Header />
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+          <motion.div
+            style={{
+              transform: isHomeInView ? 'none' : 'translateX(200px)',
+              opacity: isHomeInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro">
@@ -44,8 +61,14 @@ const App = () => {
             </Box>
           </motion.div>
         </Box>
-        <Box component="section" id="about">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+        <Box component="section" id="about" ref={refAbout}>
+          <motion.div
+            style={{
+              transform: isAboutInView ? 'none' : 'translateX(200px)',
+              opacity: isAboutInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
@@ -56,8 +79,14 @@ const App = () => {
             </Box>
           </motion.div>
         </Box>
-        <Box component="section" id="resume">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+        <Box component="section" id="resume" ref={refResume}>
+          <motion.div
+            style={{
+              transform: isResumeInView ? 'none' : 'translateX(200px)',
+              opacity: isResumeInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
@@ -68,8 +97,14 @@ const App = () => {
             </Box>
           </motion.div>
         </Box>
-        <Box component="section" id="projects">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+        <Box component="section" id="projects" ref={refProjects}>
+          <motion.div
+            style={{
+              transform: isProjectsInView ? 'none' : 'translateX(200px)',
+              opacity: isProjectsInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
@@ -80,8 +115,14 @@ const App = () => {
             </Box>
           </motion.div>
         </Box>
-        <Box component="section" id="contact">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+        <Box component="section" id="contact" ref={refContact}>
+          <motion.div
+            style={{
+              transform: isContactInView ? 'none' : 'translateX(200px)',
+              opacity: isContactInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
                 <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
