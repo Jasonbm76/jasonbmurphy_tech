@@ -23,11 +23,18 @@ const Header = () => {
 
   const LinkItem = ({ href, title }) => {
     return (
-      <li>
+      <motion.li
+        whileHover={{
+          scale: 1,
+          y: -5,
+          transition: { duration: 0.5 },
+        }}
+        whileTap={{ scale: 0.9 }}
+      >
         <a href={href} title={title} onClick={() => handleClick()}>
           {title}
         </a>
-      </li>
+      </motion.li>
     );
   };
 
@@ -62,11 +69,18 @@ const Header = () => {
         </div>
 
         <motion.ul className="desktopNavMenu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
-          <li>
+          <motion.li
+            whileHover={{
+              scale: 1,
+              y: -5,
+              transition: { duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.9 }}
+          >
             <Link href="#" title="Home" className="homeIcon">
               <HomeOutlinedIcon />
             </Link>
-          </li>
+          </motion.li>
           <Spacer />
           {Links.map((link, index) => (
             <React.Fragment key={`spacer-${index}`}>
