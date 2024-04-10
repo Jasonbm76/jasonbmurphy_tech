@@ -24,7 +24,11 @@ import Resume from './components/resume/Resume';
 const App = () => {
   return (
     <React.Fragment>
-      <Container maxWidth="xl" disableGutters>
+      <div className="background-mountains">
+        <img src="/mountains.png" alt="Background" />
+      </div>
+
+      <Container maxWidth="xl" disableGutters className="mainContainer">
         <Box component="section" id="home">
           <Header />
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
