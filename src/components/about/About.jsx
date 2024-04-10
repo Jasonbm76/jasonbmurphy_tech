@@ -9,6 +9,8 @@ import Grid from '@mui/material/Grid';
 import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Box';
 
+import './about.scss';
+
 const About = () => {
   return (
     <div>

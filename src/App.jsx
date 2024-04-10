@@ -13,6 +13,9 @@ import './app.scss';
 import Home from './components/home/Home';
 import Sidebar from './components/sidebar/Sidebar';
 import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Projects from './components/projects/Projects';
+import Resume from './components/resume/Resume';
 
 // const Parallax = () => {
 //   return <Box component="section">Parallax</Box>;
@@ -50,19 +53,40 @@ const App = () => {
           </motion.div>
         </Box>
         <Box component="section" id="resume">
-          <Box component="main" className="sectionContent">
-            Resume Contents
-          </Box>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
+              <Grid container>
+                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
+                <Grid item sm={8} className="sectionContent-right home">
+                  <Resume />
+                </Grid>
+              </Grid>
+            </Box>
+          </motion.div>
         </Box>
         <Box component="section" id="projects">
-          <Box component="main" className="sectionContent">
-            Projects Contents
-          </Box>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
+              <Grid container>
+                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
+                <Grid item sm={8} className="sectionContent-right home">
+                  <Projects />
+                </Grid>
+              </Grid>
+            </Box>
+          </motion.div>
         </Box>
         <Box component="section" id="contact">
-          <Box component="main" className="sectionContent">
-            Contact Contents
-          </Box>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
+              <Grid container>
+                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
+                <Grid item sm={8} className="sectionContent-right home">
+                  <Contact />
+                </Grid>
+              </Grid>
+            </Box>
+          </motion.div>
         </Box>
       </Container>
     </React.Fragment>
