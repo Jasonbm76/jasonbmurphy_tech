@@ -35,6 +35,7 @@ function Skills() {
     { type: 'Perl', level: 15 },
     { type: 'ASP.net', level: 15 },
     { type: 'SQL', level: 15 },
+    { type: 'Node.js', level: 55 },
     // {
     //   type: 'Node.js',
     //   level: 50,
@@ -66,7 +67,7 @@ function Skills() {
         <Skillbar skills={skills} colors={colors} />
       </div>
       <Typography variant="h5" component="h5">
-        Related Skills
+        Related Experiences
       </Typography>
       <Typography variant="body1" component="p" className="related">
         Agile, Scrum, Kanban, JIRA, Confluence, Bitbucket, GitHub, Docker, RESTful APIs, Webpack, Babel, ESLint, Prettier, Jest, Cypress, Selenium, Jenkins,
