@@ -41,6 +41,10 @@ function Home() {
         <a href="https://github.com/Jasonbm76/jasonmurphy_tech" title="View my Github link" target="_blank" rel="noreferrer">
           here
         </a>
+        . You can also find me on LinkedIn{' '}
+        <a href="https://www.linkedin.com/in/jasonbm76" target="_blank" title="View my LinkedIn profile" rel="noreferrer">
+          here
+        </a>
         .
       </Typography>
     </div>
