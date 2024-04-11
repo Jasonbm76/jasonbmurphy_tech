@@ -63,7 +63,7 @@ const Contact = () => {
       <Box component="form" ref={form} noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <TextField autoComplete="given-name" name="name" required fullWidth id="name" label="Name" autoFocus />
+            <TextField autoComplete="given-name" name="name" required fullWidth id="name" label="Name" />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField required fullWidth id="email" label="Email Address" name="reply_to" autoComplete="email" />
