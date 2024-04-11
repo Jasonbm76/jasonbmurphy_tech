@@ -8,7 +8,7 @@ import { useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import Divider from '@mui/material/Divider';
 
-const Links = ['about', 'skills', 'resume', 'projects', 'contact'];
+const Links = ['about', 'resume', 'projects', 'skills', 'contact'];
 
 const Spacer = () => {
   return <Box component="span" sx={{ mx: 1 }} />;

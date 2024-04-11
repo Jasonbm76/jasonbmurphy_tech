@@ -21,6 +21,8 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  word-wrap: none;
+  white-space: nowrap;
 }
 
 a:hover {
@@ -63,7 +65,6 @@ p {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     line-height: 2em;
-    // width: 85%;
   }
 }
 
@@ -114,7 +115,6 @@ section {
     .sectionContent-left {
       padding: 20px;
       display: flex;
-      // flex-grow: 1;
       flex-direction: column;
     }
 
@@ -125,26 +125,6 @@ section {
       display: flex;
       flex-direction: column;
       flex-grow: 0;
-
-      // @media (max-width: 899px) {
-      //   margin-left: 0;
-      // }
     }
   }
 }
-
-// @mixin mobile {
-//   @media (max-width: 738px) {
-//     @content;
-//   }
-// }
-// @mixin tablet {
-//   @media (max-width: 1024px) {
-//     @content;
-//   }
-// }
-// @mixin desktop {
-//   @media (max-width: 1366px) {
-//     @content;
-//   }
-// }

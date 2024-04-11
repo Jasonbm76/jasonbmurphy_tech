@@ -1,11 +1,9 @@
 import * as React from 'react';
-import { useState, useRef } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import Hidden from '@mui/material/Hidden';
 import Header from './components/header/Header';
 
 import './app.scss';
@@ -78,24 +76,6 @@ const App = () => {
             </Box>
           </motion.div>
         </Box>
-        <Box component="section" id="skills" ref={refSkills}>
-          <motion.div
-            style={{
-              transform: isSkillsInView ? 'none' : 'translateX(200px)',
-              opacity: isSkillsInView ? 1 : 0,
-              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-            }}
-          >
-            <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
-              <Grid container>
-                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
-                <Grid item sm={8} className="sectionContent-right home">
-                  <Skills />
-                </Grid>
-              </Grid>
-            </Box>
-          </motion.div>
-        </Box>
         <Box component="section" id="resume" ref={refResume}>
           <motion.div
             style={{
@@ -127,6 +107,24 @@ const App = () => {
                 <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
                 <Grid item sm={8} className="sectionContent-right home">
                   <Projects />
+                </Grid>
+              </Grid>
+            </Box>
+          </motion.div>
+        </Box>
+        <Box component="section" id="skills" ref={refSkills}>
+          <motion.div
+            style={{
+              transform: isSkillsInView ? 'none' : 'translateX(200px)',
+              opacity: isSkillsInView ? 1 : 0,
+              transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            }}
+          >
+            <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
+              <Grid container>
+                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
+                <Grid item sm={8} className="sectionContent-right home">
+                  <Skills />
                 </Grid>
               </Grid>
             </Box>

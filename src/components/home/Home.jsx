@@ -1,15 +1,5 @@
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Box';
-
-import { motion } from 'framer-motion';
 
 import './home.scss';
 
@@ -32,15 +22,19 @@ function Home() {
         <a href="#resume" title="View My Resume">
           my resume
         </a>
-        , see{' '}
+        , see a sample of{' '}
         <a href="#projects" title="View My Projects">
-          my projects
+          projects I&apos;ve worked on
         </a>
-        , and{' '}
+        , check out{' '}
+        <a href="#resume" title="View My Skills">
+          my skills
+        </a>
+        , or{' '}
         <a href="#contact" title="Contact Me">
           contact me
         </a>
-        . Feel free to explore the site and reach out.
+        . Feel free to explore the site and reach out if you&apos;d like to.
       </Typography>
       <Typography variant="body1" component="p" className="welcome">
         GitHub source available{' '}

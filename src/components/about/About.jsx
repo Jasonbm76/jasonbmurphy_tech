@@ -1,12 +1,4 @@
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Box';
 
 import './about.scss';
@@ -18,9 +10,12 @@ const About = () => {
         About Me
       </Typography>
       <Typography variant="body1" component="p" className="lead">
-        &rsquo;There&apos;s always room on the extra mile&rsquo;
+        &rsquo;There&apos;s always room on the extra mile&rsquo; - J.R. Grffith (Director of Ed at AIH)
       </Typography>
       <Divider className="horizontal-divider" />
+      <Typography variant="h5" component="h5">
+        Professionally
+      </Typography>
       <Typography variant="body1" component="p" className="welcome">
         A Senior Software Engineer with over 20 years of experience in designing, implementing, and optimizing micro frontend and API-driven architectures. I am
         a frontend expert and a React.js enthusiast, with hands-on experience in creating modular, scalable, and responsive frontend components using React.js,
@@ -32,6 +27,15 @@ const About = () => {
         applications across products and devices. I am also skilled in building RESTful APIs and integrating backend services, ensuring efficient data flow and
         improved user experience. I am eager to leverage my expertise and contribute to the development of cutting-edge applications in a dynamic and
         growth-oriented environment.
+      </Typography>
+      <Divider className="horizontal-divider" />
+      <Typography variant="h5" component="h5">
+        Personally
+      </Typography>
+      <Typography variant="body1" component="p" className="welcome">
+        I am a dedicated husband and father of two beautiful children. I enjoy spending time with my family, exploring new places, and trying new foods. I am an
+        avid sports fan and also love wood working and building stuff in my spare time. One thing that I really take pride in is my ability to learn things and
+        challenge myself both professionally and in my personal life and so far it has been a great journey.
       </Typography>
     </div>
   );

@@ -1,20 +1,9 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Box';
 
 import './sidebar.scss';
 
 const Sidebar = () => {
-  const learnMoreClick = () => {
-    window.location.href = '#about';
-  };
-
   return (
     <div className="sidebar">
       <span className="photo">
@@ -41,9 +30,9 @@ const Sidebar = () => {
           responsive, and accessible websites.
         </Typography>
 
-        <Button variant="outlined" className="learn-more" onClick={learnMoreClick}>
-          Learn More
-        </Button>
+        <Typography variant="body1" component="p" className="copyright">
+          &copy; 2024 Jason Murphy
+        </Typography>
       </div>
     </div>
   );

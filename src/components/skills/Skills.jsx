@@ -1,12 +1,4 @@
-import React from 'react';
-
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Box';
 import Skillbar from 'react-skillbars';
 
@@ -60,7 +52,7 @@ function Skills() {
         Skills
       </Typography>
       <Typography variant="body1" component="p" className="lead">
-        My sweet skills
+        This is kinda silly and fluid but this is how I rate myself on various skills
       </Typography>
       <Divider className="horizontal-divider" />
       <div className="skills">
@@ -70,8 +62,8 @@ function Skills() {
         Related Experiences
       </Typography>
       <Typography variant="body1" component="p" className="related">
-        Agile, Scrum, Kanban, JIRA, Confluence, Bitbucket, GitHub, Docker, RESTful APIs, Webpack, Babel, ESLint, Prettier, Jest, Cypress, Selenium, Jenkins,
-        Figma, Sketch, Adobe XD, Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Audition, Lightroom, Flash (RIP)
+        MFE (Micro Frontend), Agile, Scrum, Kanban, JIRA, Confluence, Bitbucket, GitHub, Docker, RESTful APIs, Webpack, Babel, ESLint, Prettier, Jest, Cypress,
+        Selenium, Jenkins, Figma, Sketch, Adobe XD, Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Audition, Lightroom, Flash (RIP)
       </Typography>
     </div>
   );
