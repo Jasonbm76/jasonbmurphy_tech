@@ -21,7 +21,7 @@ const Projects = () => {
       <Stack spacing={2} className="projects">
         <Card sx={{ border: 0 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/public/bluehost.jpg" alt="Bluehost Screenshot" />
+            <CardMedia component="img" image="/bluehost.jpg" alt="Bluehost Screenshot" />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Bluehost Homepage
@@ -35,7 +35,7 @@ const Projects = () => {
         </Card>
         <Card sx={{ border: 0 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/public/bluehost2.jpg" alt="Bluehost Screenshot" />
+            <CardMedia component="img" image="/bluehost2.jpg" alt="Bluehost Screenshot" />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Bluehost Plan Selection
@@ -49,7 +49,7 @@ const Projects = () => {
         </Card>
         <Card sx={{ border: 0 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/public/hostgator.jpg" alt="Bluehost Screenshot" />
+            <CardMedia component="img" image="/hostgator.jpg" alt="Bluehost Screenshot" />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 Hostgator Homepage
