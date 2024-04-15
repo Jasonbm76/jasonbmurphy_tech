@@ -141,7 +141,7 @@ const Contact = () => {
           </Grid>
         </Grid>
 
-        <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} disabled={isDisabled}>
+        <Button type="submit" variant="contained" sx={{ mt: 3, mb: 2 }} disabled={isDisabled || !emailValid}>
           Send Message
         </Button>
 
