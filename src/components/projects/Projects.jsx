@@ -23,7 +23,7 @@ const Projects = () => {
           <CardActionArea>
             <CardMedia component="img" image="/bluehost.jpg" alt="Bluehost Screenshot" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography variant="h5" component="div">
                 Bluehost Homepage
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -35,10 +35,10 @@ const Projects = () => {
         </Card>
         <Card sx={{ border: 0 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/bluehost2.jpg" alt="Bluehost Screenshot" />
+            <CardMedia component="img" image="/bluehost2.jpg" alt="BlueHost Screenshot" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Bluehost Plan Selection
+              <Typography variant="h5" component="div">
+                BlueHost Plan Selection
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Throughout the website there are many challenging areas where we have to fit a dynamic number of plan tiers with dynamic text into the flow of
@@ -49,10 +49,10 @@ const Projects = () => {
         </Card>
         <Card sx={{ border: 0 }}>
           <CardActionArea>
-            <CardMedia component="img" image="/hostgator.jpg" alt="Bluehost Screenshot" />
+            <CardMedia component="img" image="/hostgator.jpg" alt="HostGator Screenshot" />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Hostgator Homepage
+              <Typography variant="h5" component="div">
+                HostGator Homepage
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 The other main brand that I worked on was Hostgator. Hostgator was more challenging as it is known in the industry as more of a fun and playful
