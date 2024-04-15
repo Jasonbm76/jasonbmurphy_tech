@@ -18,28 +18,6 @@ import './contact.scss';
 const Contact = () => {
   const form = useRef();
 
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm();
-  // const onSubmit = (values) =>
-  //   emailjs
-  //     .sendForm('service_ijwrfcd', 'template_euwfa49', form.current, {
-  //       publicKey: 'XQ9kFF5BwgvXh4hOB',
-  //     })
-  //     .then(
-  //       () => {
-  //         console.log('SUCCESS!');
-  //         setSuccessOpen(true);
-  //         form.current.reset();
-  //       },
-  //       (error) => {
-  //         console.log('FAILED...', error.text);
-  //         setErrorOpen(true);
-  //       }
-  //     );
-
   const [errorOpen, setErrorOpen] = useState(false);
   const [successOpen, setSuccessOpen] = useState(false);
 
