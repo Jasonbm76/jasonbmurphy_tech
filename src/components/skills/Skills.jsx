@@ -6,28 +6,63 @@ import './skills.scss';
 
 function Skills() {
   // , color: { bar: '#388e3c' }
+  // #2A3877
   const skills = [
-    { type: 'React', level: 80 },
-    { type: 'JavaScript', level: 75 },
-    { type: 'jQuery', level: 75 },
-    { type: 'HTML', level: 90 },
-    { type: 'CSS', level: 90 },
-    { type: 'UX', level: 85 },
-    { type: 'Git', level: 65 },
+    {
+      type: 'React',
+      level: 80,
+      color: {
+        bar: '#4E458B',
+        title: { text: '#fff', background: '#4E458B' },
+      },
+    },
+    {
+      type: 'JavaScript',
+      level: 85,
+      color: {
+        bar: '#4E458B',
+        title: { text: '#fff', background: '#4E458B' },
+      },
+    },
+    {
+      type: 'jQuery',
+      level: 85,
+      color: {
+        bar: '#4E458B',
+        title: { text: '#fff', background: '#4E458B' },
+      },
+    },
+    {
+      type: 'Node.js',
+      level: 75,
+      color: {
+        bar: '#4E458B',
+        title: { text: '#fff', background: '#4E458B' },
+      },
+    },
+    {
+      type: 'HTML',
+      level: 95,
+      color: {
+        bar: '#885CA9',
+        title: { text: '#fff', background: '#885CA9' },
+      },
+    },
+    {
+      type: 'CSS',
+      level: 95,
+      color: {
+        bar: '#885CA9',
+        title: { text: '#fff', background: '#885CA9' },
+      },
+    },
+    { type: 'UX', level: 65 },
+    { type: 'Git', level: 75 },
     { type: 'Python', level: 45 },
     { type: 'PHP', level: 25 },
     { type: 'Perl', level: 15 },
     { type: 'ASP.net', level: 15 },
     { type: 'SQL', level: 15 },
-    { type: 'Node.js', level: 55 },
-    // {
-    //   type: 'Node.js',
-    //   level: 50,
-    //   color: {
-    //     bar: '#515dd5',
-    //     title: { text: '#fff', background: '#4855be' },
-    //   },
-    // },
   ];
 
   const colors = {
