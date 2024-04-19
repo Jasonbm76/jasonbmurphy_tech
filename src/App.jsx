@@ -15,6 +15,7 @@ import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Resume from './components/resume/Resume';
 import Skills from './components/skills/Skills';
+import SidebarResume from './components/sidebars/SidebarResume';
 
 const App = () => {
   const refHome = useRef(null);
@@ -86,7 +87,9 @@ const App = () => {
           >
             <Box sx={{ flexGrow: 1 }} spacing={2} className="sectionContent">
               <Grid container>
-                <Grid item xs={12} sm={4} className="sectionContent-left intro"></Grid>
+                <Grid item xs={12} sm={4} className="sectionContent-left resume">
+                  <SidebarResume />
+                </Grid>
                 <Grid item sm={8} className="sectionContent-right home">
                   <Resume />
                 </Grid>

@@ -60,3 +60,34 @@ h6 {
     width: 10em;
   }
 }
+
+.resume-body {
+  background-color: transparent;
+  border: none;
+  max-width: 200px;
+  opacity: 0.3;
+  display: none;
+
+  @media (min-width: 900px) {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  a {
+    border: none !important;
+    text-decoration: none;
+  }
+}
+
+.resume-body-text {
+  font-size: 12px;
+}
+
+.resume-img {
+  width: auto;
+  height: 300px;
+}

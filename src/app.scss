@@ -116,6 +116,10 @@ section {
       padding: 20px;
       display: flex;
       flex-direction: column;
+
+      &.resume {
+        padding-top: 0;
+      }
     }
 
     .sectionContent-right {
