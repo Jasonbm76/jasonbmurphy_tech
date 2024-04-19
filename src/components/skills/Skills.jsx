@@ -58,11 +58,46 @@ function Skills() {
     },
     { type: 'UX', level: 65 },
     { type: 'Git', level: 75 },
-    { type: 'Python', level: 45 },
-    { type: 'PHP', level: 25 },
-    { type: 'Perl', level: 15 },
-    { type: 'ASP.net', level: 15 },
-    { type: 'SQL', level: 15 },
+    {
+      type: 'Python',
+      level: 35,
+      color: {
+        bar: '#F4AEA5',
+        title: { text: '#fff', background: '#cc847c' },
+      },
+    },
+    {
+      type: 'PHP',
+      level: 25,
+      color: {
+        bar: '#F4AEA5',
+        title: { text: '#fff', background: '#cc847c' },
+      },
+    },
+    {
+      type: 'Perl',
+      level: 15,
+      color: {
+        bar: '#F4AEA5',
+        title: { text: '#fff', background: '#cc847c' },
+      },
+    },
+    {
+      type: 'ASP.net',
+      level: 15,
+      color: {
+        bar: '#F4AEA5',
+        title: { text: '#fff', background: '#cc847c' },
+      },
+    },
+    {
+      type: 'SQL',
+      level: 15,
+      color: {
+        bar: '#F4AEA5',
+        title: { text: '#fff', background: '#cc847c' },
+      },
+    },
   ];
 
   const colors = {
