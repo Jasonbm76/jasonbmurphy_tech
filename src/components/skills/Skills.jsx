@@ -7,19 +7,11 @@ import './skills.scss';
 function Skills() {
   // , color: { bar: '#388e3c' }
   const skills = [
+    { type: 'React', level: 80 },
+    { type: 'JavaScript', level: 75 },
+    { type: 'jQuery', level: 75 },
     { type: 'HTML', level: 90 },
     { type: 'CSS', level: 90 },
-    // {
-    //   type: 'Javascript',
-    //   level: 75,
-    //   color: {
-    //     bar: '#3E5871',
-    //     title: { text: '#fff', background: '#2c3e50' },
-    //   },
-    // },
-    { type: 'JavaScript', level: 75 },
-    { type: 'React', level: 65 },
-    { type: 'jQuery', level: 75 },
     { type: 'UX', level: 85 },
     { type: 'Git', level: 65 },
     { type: 'Python', level: 45 },
