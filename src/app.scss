@@ -49,6 +49,11 @@ h1 {
 h1,
 h2 {
 	letter-spacing: 6px;
+	color: #553c9a;
+	background-image: linear-gradient(to top, #2a225d, #8277cb);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 p {
@@ -80,6 +85,22 @@ p {
 
 .mainContainer {
 	z-index: 10;
+}
+
+.progressMainWrapper {
+	background-color: black;
+	height: 5px;
+	position: fixed;
+	top: 70px0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+}
+
+.progressMainStyle {
+	height: 5px;
+	background-color: #463e7d;
+	width: 0;
 }
 
 section {
