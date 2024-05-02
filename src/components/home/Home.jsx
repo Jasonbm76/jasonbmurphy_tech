@@ -1,10 +1,9 @@
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { HStack } from '@chakra-ui/react';
+import { HStack, Flex, Spacer } from '@chakra-ui/react';
 
 import './home.scss';
 
@@ -47,7 +46,9 @@ function Home() {
 				variant='body1'
 				component='p'
 				className='welcome'>
-				Welcome to my website. Here you can learn{' '}
+				Hey there, my name is Jason and I&apos;m a Senior Software Engineer /
+				Front End Expert. I&apos;m passionate about creating pixel-perfect,
+				beautiful, responsive, and accessible websites. Here you can learn{' '}
 				<a
 					href='#about'
 					title='About Me'>
@@ -79,42 +80,31 @@ function Home() {
 				</a>
 				. Feel free to explore the site and reach out if you&apos;d like to.
 			</Typography>
-			<Typography
-				variant='body1'
-				component='p'
-				className='welcome'>
-				GitHub source available{' '}
-				<a
-					href='https://github.com/Jasonbm76/jasonmurphy_tech'
-					title='View my Github link'
-					target='_blank'
-					rel='noreferrer'>
-					here
-				</a>
-				. You can also find me on LinkedIn{' '}
-				<a
-					href='https://www.linkedin.com/in/jasonbm76'
-					target='_blank'
-					title='View my LinkedIn profile'
-					rel='noreferrer'>
-					here
-				</a>
-				.
-			</Typography>
 			<nav>
-				<HStack spacing={15}>
-					{socials.map(({ icon, url, title }) => (
-						<a
-							key={url}
-							href={url}
-							className='socialLink'
-							title={title}
-							target='_blank'
-							rel='noreferrer'>
-							{icon}
-						</a>
-					))}
-				</HStack>
+				<Flex
+					alignItems='center'
+					justifyContent='justify'>
+					<HStack spacing={15}>
+						{socials.map(({ icon, url, title }) => (
+							<a
+								key={url}
+								href={url}
+								className='socialLink'
+								title={title}
+								target='_blank'
+								rel='noreferrer'>
+								{icon}
+							</a>
+						))}
+					</HStack>
+					<Spacer />
+					<Typography
+						variant='body1'
+						component='p'
+						className='copyright'>
+						&copy; 2024 Jason Murphy
+					</Typography>
+				</Flex>
 			</nav>
 		</div>
 	);

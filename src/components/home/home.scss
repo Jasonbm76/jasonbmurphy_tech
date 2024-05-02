@@ -13,11 +13,12 @@ h6 {
 }
 
 nav {
-	margin-top: 20px;
+	margin-top: 50px;
 
 	.socialLink {
 		text-decoration: none;
 		border-bottom: 0 !important;
+		display: flex;
 	}
 }
 
@@ -25,5 +26,4 @@ nav {
 	margin-top: 30px;
 	font-size: 14px;
 	line-height: 30px;
-	// width: 85%;
 }

@@ -1,93 +1,95 @@
 h2 {
-  margin-top: 1em;
+	margin-top: 1em;
 }
 
 h6 {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 .briefly {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 
 .briefly-content {
-  letter-spacing: 0;
+	letter-spacing: 0;
 
-  @media (max-width: 899px) {
-    font-size: 14px;
-  }
-}
-
-.copyright {
-  margin-top: 15px;
+	@media (max-width: 899px) {
+		font-size: 14px;
+	}
 }
 
 .email-info {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .email-icon {
-  width: 15px !important;
-  margin-right: 10px;
+	width: 15px !important;
+	margin-right: 10px;
 }
 
 .email-link {
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
 
-  &:hover {
-    color: #2e59ba;
-  }
+	&:hover {
+		color: #2e59ba;
+	}
 }
 
 .learn-more {
-  max-width: 150px;
-  font-size: 10px !important;
-  padding: 10px !important;
-  margin-top: 15px !important;
-}
-
-.photo {
-  width: 160px;
-  height: 160px;
-
-  img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    display: block;
-    width: 10em;
-  }
+	max-width: 150px;
+	font-size: 10px !important;
+	padding: 10px !important;
+	margin-top: 15px !important;
 }
 
 .resume-body {
-  background-color: transparent;
-  border: none;
-  max-width: 200px;
-  opacity: 0.3;
-  display: none;
+	background-color: transparent;
+	border: none;
+	max-width: 200px;
+	opacity: 0.5;
+	display: none;
 
-  @media (min-width: 900px) {
-    display: block;
-  }
+	@media (min-width: 900px) {
+		display: block;
+	}
 
-  &:hover {
-    opacity: 1;
-    transition: opacity 1s;
-  }
+	&:hover {
+		opacity: 1;
+		transition: opacity 1s;
+	}
 
-  a {
-    border: none !important;
-    text-decoration: none;
-  }
+	a {
+		border: none !important;
+		text-decoration: none;
+	}
 }
 
 .resume-body-text {
-  font-size: 12px;
+	font-size: 12px;
 }
 
 .resume-img {
-  width: auto;
-  height: 300px;
+	width: auto;
+	height: 300px;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.photo {
+		width: 160px;
+		height: 160px;
+
+		img {
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			display: block;
+			width: 10em;
+		}
+	}
 }

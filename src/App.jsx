@@ -56,6 +56,8 @@ const App = () => {
 				/>
 			</div>
 
+			<div className='background-planets'></div>
+
 			<div className='progressMainWrapper'>
 				<div
 					className='progressMainStyle'
