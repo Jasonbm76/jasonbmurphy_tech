@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -71,7 +71,19 @@ const projectsArray = [
 	},
 ];
 
-const MobileProject = ({ name, link, image, alt, description }) => {
+const MobileProject = ({
+	name,
+	link,
+	image,
+	alt,
+	description,
+}: {
+	name: string;
+	link: string;
+	image: string;
+	alt: string;
+	description: string;
+}) => {
 	return (
 		<Card
 			sx={{ border: 0 }}
@@ -89,13 +101,9 @@ const MobileProject = ({ name, link, image, alt, description }) => {
 					/>
 				</Link>
 				<CardContent>
+					<Typography component='h5'>{name}</Typography>
 					<Typography
-						variant='h5'
-						component='div'>
-						{name}
-					</Typography>
-					<Typography
-						variant='body2'
+						component='p'
 						color='text.secondary'>
 						{description}
 					</Typography>
@@ -105,7 +113,7 @@ const MobileProject = ({ name, link, image, alt, description }) => {
 	);
 };
 
-const Projects = () => {
+const Projects: React.FC = () => {
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -116,13 +124,8 @@ const Projects = () => {
 
 	return (
 		<div>
+			<Typography component='h2'>My Projects</Typography>
 			<Typography
-				variant='h2'
-				component='h2'>
-				My Projects
-			</Typography>
-			<Typography
-				variant='body1'
 				component='p'
 				className='lead'>
 				These are some of the things that I have worked on in the recent past.
@@ -147,13 +150,9 @@ const Projects = () => {
 										className='sliderImg'
 									/>
 								</a>
+								<Typography component='h5'>{item.name}</Typography>
 								<Typography
-									variant='h5'
-									component='h5'>
-									{item.name}
-								</Typography>
-								<Typography
-									variant='body2'
+									component='p'
 									color='text.secondary'
 									className='description'>
 									{item.description}
@@ -172,21 +171,14 @@ const Projects = () => {
 					))}
 				</div>
 
+				<Typography component='h5'>Note</Typography>
 				<Typography
-					variant='h5'
-					component='h5'>
-					Note
-				</Typography>
-				<Typography
-					variant='body1'
 					component='p'
 					className='related'>
-					These are just a few of the projects that I have worked on, although I
-					have many other projects that are not listed here. Since I have spent
-					my entire career working on projects for other companies, I do not
-					have permission to show the source code. I have worked on everything
-					from refactoring legacy monolithic applications to building new
-					applications from scratch.
+					These are just a few of the projects that I have worked on, although I have many other projects that are not
+					listed here. Since I have spent my entire career working on projects for other companies, I do not have
+					permission to show the source code. I have worked on everything from refactoring legacy monolithic
+					applications to building new applications from scratch.
 				</Typography>
 			</Stack>
 		</div>

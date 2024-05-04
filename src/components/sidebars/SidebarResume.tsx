@@ -1,6 +1,6 @@
 import './sidebar.scss';
 
-const SidebarResume = () => {
+const SidebarResume: React.FC = () => {
 	return (
 		<div className='sidebar'>
 			<div className='resume-body'>

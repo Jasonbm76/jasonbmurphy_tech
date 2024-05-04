@@ -2,7 +2,7 @@ import './header.scss';
 import { motion } from 'framer-motion';
 //import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { Box, HStack } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
 import { useEffect, useRef, useState } from 'react';
@@ -12,15 +12,10 @@ import Divider from '@mui/material/Divider';
 const Links = ['about', 'resume', 'projects', 'skills', 'contact'];
 
 const Spacer = () => {
-	return (
-		<span
-			component='span'
-			sx={{ mx: 1 }}
-		/>
-	);
+	return <span style={{ marginLeft: 1, marginRight: 1 }} />;
 };
 
-const Header = () => {
+const Header: React.FC = () => {
 	const [isOpen, setOpen] = useState(false);
 	const headerRef = useRef(null);
 
@@ -29,7 +24,7 @@ const Header = () => {
 
 		const handleScroll = () => {
 			const currScrollPos = window.scrollY;
-			const currHeaderElement = headerRef.current;
+			const currHeaderElement = headerRef.current as unknown as HTMLElement; // Update type assertion to convert to 'unknown' first
 
 			if (!currHeaderElement) return;
 
@@ -51,7 +46,7 @@ const Header = () => {
 		setOpen(false);
 	};
 
-	const LinkItem = ({ href, title }) => {
+	const LinkItem = ({ href, title }: { href: string; title: string }) => {
 		return (
 			<motion.li
 				whileHover={{

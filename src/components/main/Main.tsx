@@ -6,9 +6,9 @@ import { motion, useInView } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import Header from '../header/Header';
 
 import Home from '../home/Home';
+import Header from '../header/Header';
 import SidebarHome from '../sidebars/SidebarHome';
 import About from '../about/About';
 import Contact from '../contact/Contact';
@@ -17,7 +17,7 @@ import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
 import SidebarResume from '../sidebars/SidebarResume';
 
-const Main = () => {
+const Main: React.FC = () => {
 	const refHome = useRef(null);
 	const refAbout = useRef(null);
 	const refResume = useRef(null);
@@ -35,9 +35,7 @@ const Main = () => {
 
 	const onScroll = () => {
 		const winScroll = document.documentElement.scrollTop;
-		const height =
-			document.documentElement.scrollHeight -
-			document.documentElement.clientHeight;
+		const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 		const scrolled = Math.round((winScroll / height) * 100);
 		setScrollTop(scrolled);
@@ -74,8 +72,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid
@@ -106,8 +104,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid
@@ -136,8 +134,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid
@@ -168,8 +166,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid
@@ -198,8 +196,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid
@@ -228,8 +226,8 @@ const Main = () => {
 							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
 						}}>
 						<Box
+							component='div'
 							sx={{ flexGrow: 1 }}
-							spacing={2}
 							className='sectionContent'>
 							<Grid container>
 								<Grid

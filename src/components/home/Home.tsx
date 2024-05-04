@@ -25,30 +25,22 @@ const socials = [
 	},
 ];
 
-function Home() {
+const Home: React.FC = () => {
 	return (
 		<div>
+			<Typography component='h2'>About this site</Typography>
 			<Typography
-				variant='h2'
-				component='h2'>
-				About this site
-			</Typography>
-			<Typography
-				variant='body1'
 				component='p'
 				className='lead'>
-				This site was built with React, Material-UI, SASS, and Framer Motion. It
-				is a single-page application with a responsive design and accessible
-				content.
+				This site was built with React, Material-UI, SASS, and Framer Motion. It is a single-page application with a
+				responsive design and accessible content.
 			</Typography>
 			<Divider className='horizontal-divider' />
 			<Typography
-				variant='body1'
 				component='p'
 				className='welcome'>
-				Hey there, my name is Jason and I&apos;m a Senior Software Engineer /
-				Front End Expert. I&apos;m passionate about creating pixel-perfect,
-				beautiful, responsive, and accessible websites. Here you can learn{' '}
+				Hey there, my name is Jason and I&apos;m a Senior Software Engineer / Front End Expert. I&apos;m passionate
+				about creating pixel-perfect, beautiful, responsive, and accessible websites. Here you can learn{' '}
 				<a
 					href='#about'
 					title='About Me'>
@@ -99,7 +91,6 @@ function Home() {
 					</HStack>
 					<Spacer />
 					<Typography
-						variant='body1'
 						component='p'
 						className='copyright'>
 						&copy; 2024 Jason Murphy
@@ -108,6 +99,6 @@ function Home() {
 			</nav>
 		</div>
 	);
-}
+};
 
 export default Home;
