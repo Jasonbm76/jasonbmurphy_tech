@@ -4,6 +4,42 @@ import Typography from '@mui/material/Box';
 
 import './resume.scss';
 
+const resumeBulletPoints = [
+	[
+		'Managed story prioritization in Jira, collaborating closely with product, UX, and QA teams to ensure bug-free deployments to production. Utilized a Jenkins pipeline and AWS within the CI/CD process to facilitate seamless deployments',
+		'Conceptualized, built, and implemented standardized functional React Components',
+		'Orchestrated the development of a standardized Design System and reusable component library with Storybook integration',
+		'Leveraged front-end data caching libraries and methods (e.g. react-query) to optimize performance, showcasing various data states',
+		'Acted as the Front-End Subject Matter Expert, providing valuable insights and guidance to the team',
+		'Collaborated with UI/UX designers to transform wireframes and mockups into responsive, user-friendly interfaces for seamless cross-device experiences',
+		'Worked Optimizely team to set up A/B testing and slow rollouts',
+		'Helped build a Javascript library to consume backend API data with React Query',
+		'Redesigned and developed large-scale web projects, including overhauling the front-end of our customer purchase flow and billing portal resulting in a mobile-responsive interface, and boosting conversions by over 5%',
+		'Worked on an Agile Scrum team building custom white-label microfrontend software',
+		'Conducted thorough peer code reviews to ensure code quality and consistency',
+		'Contributed to Change Management processes through BitBucket/Git and managed issues efficiently using Jira',
+	],
+	[
+		'Managed the drilling section of the website which included over 50 pages with Sitecore CMS',
+		'Boosted traffic and improved search engine ranking with optimized web content',
+		'Built website landing pages, email content and other demand generation assets',
+		'Created internal websites used by members of the executive team to track performance metrics',
+	],
+	[
+		'Responsible for the design and programming of our company website and interactive CD’s',
+		'Designed and built of 35 client websites in HTML with CSS which have been honored with multiple state and national awards in the home building industry for website design and ease of use',
+		'Design and programming of Flash presentations as well as graphics for ads, billboards, newspaper, and magazines for national home builders',
+		'Numerous projects creating dynamic Flash applications that interact with server-side web pages and XML files to retrieve data from and send data to databases. Also responsible for company IT support and creative thinking towards ideas to save the company time and resources',
+	],
+	[
+		'Promoted to Sgt / E-5 in 4 years',
+		'Responsible for up to 5 soldiers directly under my command',
+		'Achieved a near perfect score in front of a promotion board of senior peers',
+		'Received numerous awards and decorations totaling 11 for achievements and discipline',
+		'Participated in test program for Army recruiting as one of the youngest recruiters in the history of the US Army',
+	],
+];
+
 const Resume: React.FC = () => {
 	return (
 		<div>
@@ -45,46 +81,10 @@ const Resume: React.FC = () => {
 						className='resume-content-right'>
 						<Typography component='h5'>Newfold Digital - Senior Software Engineer</Typography>
 						<Typography component='h6'>Feb 2016 - December 2023</Typography>
-						<Typography
-							component='p'
-							className='resume-company-summary'>
-							Newfold Digital is a leading web presence solutions provider serving millions of small-to-medium
-							businesses globally. Through their portfolio of brands, Bluehost, CrazyDomains, HostGator, Network
-							Solutions, Register.com, Web.com and many others, they help customers of all sizes build a digital
-							presence that delivers results and brings value to businesses.
-						</Typography>
 						<ul className='resume-bullet-points'>
-							<li>
-								Spearheaded the development of micro front end architecture using React.js, facilitating modular and
-								scalable frontend components for enhanced maintainability and flexibility.
-							</li>
-							<li>
-								Designed and implemented RESTful APIs to seamlessly integrate backend services with frontend
-								applications, ensuring efficient data flow and improved user experience.
-							</li>
-							<li>
-								Collaborated with cross-functional teams to define API contracts and data models, ensuring consistency
-								and interoperability across microservices.
-							</li>
-							<li>
-								Worked closely with UI/UX designers to translate wireframes and mockups into responsive and intuitive
-								user interfaces, ensuring a seamless user experience across devices.
-							</li>
-							<li>
-								Contributed to the adoption of DevOps practices such as continuous integration, automated testing, and
-								containerization (Docker) to streamline deployment workflows and improve release cycles.
-							</li>
-							<li>
-								Developed and maintained responsive web applications using React.js, Typescript, HTML5, CSS3
-								(SASS/SCSS).
-							</li>
-							<li>
-								Responsible for designing and developing existing large scale web projects, including a complete
-								front-end refactor of our customer billing portal from registration flow to the customer portal which
-								allowed us to have a mobile presence thereby increasing conversions by more than 5%.
-							</li>
-							<li>Conducted code reviews and provided constructive feedback to team members.</li>
-							<li>Lead and mentored junior developers, fostering a culture of continuous learning and improvement.</li>
+							{resumeBulletPoints[0].map((point, index) => (
+								<li key={index}>{point}</li>
+							))}
 						</ul>
 					</Grid>
 				</Grid>
@@ -116,20 +116,9 @@ const Resume: React.FC = () => {
 						<Typography component='h5'>Schlumberger - Senior Web Developer</Typography>
 						<Typography component='h6'>Feb 2007 - October 2015</Typography>
 						<ul className='resume-bullet-points'>
-							<li>
-								Develop and implement creative concepts for interactive media, internal and external presentations,
-								audio/video elements and trade show presentations. Responsible for managing, maintaining and updating
-								communications-related libraries as well as preparing and executing electronic and/or multimedia
-								campaigns for new technology launches.
-							</li>
-							<li>
-								Create training videos for deployment on the company intranet site, flash drives and CD/DVD ROM&apos;s.
-							</li>
-							<li>
-								Create interactive sales aids and tools to support new technology launches, trade shows, customer events
-								and internal conferences.
-							</li>
-							<li>Design and produce materials on CD and DVD and manage vendors to facilitate this process.</li>
+							{resumeBulletPoints[1].map((point, index) => (
+								<li key={index}>{point}</li>
+							))}
 						</ul>
 					</Grid>
 				</Grid>
@@ -161,20 +150,9 @@ const Resume: React.FC = () => {
 						<Typography component='h5'>Customer Velocity - Senior Interactive Programmer</Typography>
 						<Typography component='h6'>Dec 2002 - Feb 2007</Typography>
 						<ul className='resume-bullet-points'>
-							<li>
-								Responsible for the design and programming of our company website and interactive CD’s. Design and
-								programming of 35 client websites in HTML with CSS, ASP.NET which have been honored with multiple state
-								and national awards in the home building industry for website design and ease of use.
-							</li>
-							<li>
-								Design and programming of Flash presentations as well as graphics for ads, billboards, newspaper, and
-								magazines for National home builders and developers like Pulte Homes, ICI Homes, and many more.
-							</li>
-							<li>
-								Numerous projects creating dynamic Flash applications that interact with server-side web pages and XML
-								files to retrieve data from and send data to databases. Also responsible for company IT support and
-								creative thinking towards ideas to save the company time and resources.
-							</li>
+							{resumeBulletPoints[2].map((point, index) => (
+								<li key={index}>{point}</li>
+							))}
 						</ul>
 					</Grid>
 				</Grid>
@@ -206,12 +184,9 @@ const Resume: React.FC = () => {
 						<Typography component='h5'>US Army - Airborne Ranger &amp; Recruiting and Retention Officer</Typography>
 						<Typography component='h6'>Nov 1995 - June 2001</Typography>
 						<ul className='resume-bullet-points'>
-							<li>
-								Responsible for up to 5 soldiers directly under my command. Achieved a near perfect score in front of a
-								promotion board of senior peers. Received numerous awards and decorations totaling 11 for achievements
-								and discipline. Participated in test program for Army recruiting as one of the youngest recruiters in
-								the history of the US Army.
-							</li>
+							{resumeBulletPoints[3].map((point, index) => (
+								<li key={index}>{point}</li>
+							))}
 						</ul>
 					</Grid>
 				</Grid>
