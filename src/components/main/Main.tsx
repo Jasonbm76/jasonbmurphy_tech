@@ -6,6 +6,7 @@ import { motion, useInView } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 import Home from '../home/Home';
 import Header from '../header/Header';
@@ -16,6 +17,7 @@ import Projects from '../projects/Projects';
 import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
 import SidebarResume from '../sidebars/SidebarResume';
+//import BackToTop from '../backToTop/BackToTop';
 
 const Main: React.FC = () => {
 	const refHome = useRef(null);
@@ -36,9 +38,15 @@ const Main: React.FC = () => {
 	const onScroll = () => {
 		const winScroll = document.documentElement.scrollTop;
 		const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
+		const scrollArrow = document.querySelector('.backToTop') as HTMLElement;
 		const scrolled = Math.round((winScroll / height) * 100);
 		setScrollTop(scrolled);
+
+		if (winScroll > 100) {
+			scrollArrow.classList.toggle('hidden', false);
+		} else {
+			scrollArrow.classList.toggle('hidden', true);
+		}
 	};
 
 	useEffect(() => {
@@ -48,6 +56,11 @@ const Main: React.FC = () => {
 
 	return (
 		<>
+			<div
+				className='backToTop hidden'
+				onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+				<ArrowCircleUpIcon />
+			</div>
 			<div className='background-mountains'></div>
 
 			<div className='progressMainWrapper'>

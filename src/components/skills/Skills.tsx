@@ -25,8 +25,8 @@ const Skills: React.FC = () => {
 			},
 		},
 		{
-			type: 'jQuery',
-			level: 85,
+			type: 'Typescript',
+			level: 75,
 			color: {
 				bar: '#4E458B',
 				title: { text: '#fff', background: '#4E458B' },
@@ -123,7 +123,7 @@ const Skills: React.FC = () => {
 					colors={colors}
 				/>
 			</div>
-			<Typography component='h5'>Related Experiences</Typography>
+			<Typography component='h5'>Related Skills/Experience</Typography>
 			<Typography
 				component='p'
 				className='related'>
