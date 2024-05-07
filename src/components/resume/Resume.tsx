@@ -20,23 +20,10 @@ const resumeBulletPoints = [
 		'Contributed to Change Management processes through BitBucket/Git and managed issues efficiently using Jira',
 	],
 	[
-		'Managed the drilling section of the website which included over 50 pages with Sitecore CMS',
+		'Managed the drilling section of the website which included over 50 pages with Sitecore CMS in order to streamline deployment and allowed us to run A/B testing',
 		'Boosted traffic and improved search engine ranking with optimized web content',
-		'Built website landing pages, email content and other demand generation assets',
+		'Built website landing pages for marketing campaigns using HTML, CSS and JavaScript, templated email content and other demand generation assets',
 		'Created internal websites used by members of the executive team to track performance metrics',
-	],
-	[
-		'Responsible for the design and programming of our company website and interactive CD’s',
-		'Designed and built of 35 client websites in HTML with CSS which have been honored with multiple state and national awards in the home building industry for website design and ease of use',
-		'Design and programming of Flash presentations as well as graphics for ads, billboards, newspaper, and magazines for national home builders',
-		'Numerous projects creating dynamic Flash applications that interact with server-side web pages and XML files to retrieve data from and send data to databases. Also responsible for company IT support and creative thinking towards ideas to save the company time and resources',
-	],
-	[
-		'Promoted to Sgt / E-5 in 4 years',
-		'Responsible for up to 5 soldiers directly under my command',
-		'Achieved a near perfect score in front of a promotion board of senior peers',
-		'Received numerous awards and decorations totaling 11 for achievements and discipline',
-		'Participated in test program for Army recruiting as one of the youngest recruiters in the history of the US Army',
 	],
 ];
 
@@ -81,6 +68,15 @@ const Resume: React.FC = () => {
 						className='resume-content-right'>
 						<Typography component='h5'>Newfold Digital - Senior Software Engineer</Typography>
 						<Typography component='h6'>Feb 2016 - December 2023</Typography>
+						<Typography component='p'>
+							As a Frontend Subject Matter Expert, I provided invaluable guidance and expertise to multiple teams.
+							Notably, during my tenure at Newfold, I spearheaded an initiative to establish a tailored design system
+							and component library. Additionally, I contributed to a collaborative effort to develop a unified
+							white-label software platform using React. This platform facilitated the seamless integration of multiple
+							brands onto a single codebase. I actively conducted numerous A/B experiments to optimize conversion rates
+							and meticulously maintained brand consistency throughout our projects. I also mentored junior developers
+							and was a key voice in planning sessions.
+						</Typography>
 						<ul className='resume-bullet-points'>
 							{resumeBulletPoints[0].map((point, index) => (
 								<li key={index}>{point}</li>
@@ -138,40 +134,6 @@ const Resume: React.FC = () => {
 						xs={2}
 						className='resume-content-left'>
 						<img
-							src='/customervelocity_logo.jpeg'
-							alt='Customer Velocity'
-							className='logo'
-						/>
-					</Grid>
-					<Grid
-						item
-						xs={10}
-						className='resume-content-right'>
-						<Typography component='h5'>Customer Velocity - Senior Interactive Programmer</Typography>
-						<Typography component='h6'>Dec 2002 - Feb 2007</Typography>
-						<ul className='resume-bullet-points'>
-							{resumeBulletPoints[2].map((point, index) => (
-								<li key={index}>{point}</li>
-							))}
-						</ul>
-					</Grid>
-				</Grid>
-
-				<Grid
-					item
-					xs={12}
-					className='resume-divider'>
-					<Divider />
-				</Grid>
-
-				<Grid
-					container
-					className='resume-job'>
-					<Grid
-						item
-						xs={2}
-						className='resume-content-left'>
-						<img
 							src='/us_army_logo.jpeg'
 							alt='US Army'
 							className='logo'
@@ -182,12 +144,7 @@ const Resume: React.FC = () => {
 						xs={10}
 						className='resume-content-right'>
 						<Typography component='h5'>US Army - Airborne Ranger &amp; Recruiting and Retention Officer</Typography>
-						<Typography component='h6'>Nov 1995 - June 2001</Typography>
-						<ul className='resume-bullet-points'>
-							{resumeBulletPoints[3].map((point, index) => (
-								<li key={index}>{point}</li>
-							))}
-						</ul>
+						<Typography component='h6'>Honorably Discharged</Typography>
 					</Grid>
 				</Grid>
 
@@ -209,7 +166,7 @@ const Resume: React.FC = () => {
 					item
 					xs={12}
 					className='resume-content-right education'>
-					<Typography component='h5'>The Art Institute of Houston (2012 - 2014)</Typography>
+					<Typography component='h5'>The Art Institute of Houston</Typography>
 					<Typography component='h6'>Bachelor of Fine Arts (B.F.A.), Graphics &amp; Web Design</Typography>
 				</Grid>
 
@@ -217,7 +174,7 @@ const Resume: React.FC = () => {
 					item
 					xs={12}
 					className='resume-content-right education'>
-					<Typography component='h5'>The Art Institute of Houston (2001 - 2003)</Typography>
+					<Typography component='h5'>The Art Institute of Houston</Typography>
 					<Typography component='h6'>Associate of Applied Science (A.A.S.), Interactive Media</Typography>
 				</Grid>
 			</Grid>

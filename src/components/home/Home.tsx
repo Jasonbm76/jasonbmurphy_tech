@@ -39,7 +39,7 @@ const Home: React.FC = () => {
 			<Typography
 				component='p'
 				className='welcome'>
-				Hey there, my name is Jason and I&apos;m a Senior Software Engineer / Front End Expert. I&apos;m passionate
+				Hey there, my name is Jason and I&apos;m a Senior Software Engineer and React enthusiast. I&apos;m passionate
 				about creating pixel-perfect, beautiful, responsive, and accessible websites. Here you can learn{' '}
 				<a
 					href='#about'
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
 					<Typography
 						component='p'
 						className='copyright'>
-						&copy; 2024 Jason Murphy
+						&copy; {new Date().getFullYear()} Jason Murphy
 					</Typography>
 				</Flex>
 			</nav>

@@ -17,7 +17,6 @@ import Projects from '../projects/Projects';
 import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
 import SidebarResume from '../sidebars/SidebarResume';
-//import BackToTop from '../backToTop/BackToTop';
 
 const Main: React.FC = () => {
 	const refHome = useRef(null);
@@ -35,6 +34,7 @@ const Main: React.FC = () => {
 
 	const [scrollTop, setScrollTop] = useState(0);
 
+	// Show the back to top arrow when the user scrolls down
 	const onScroll = () => {
 		const winScroll = document.documentElement.scrollTop;
 		const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -49,6 +49,26 @@ const Main: React.FC = () => {
 		}
 	};
 
+	// Scroll to the element with the ID in the URL hash on page load
+	useEffect(() => {
+		// Get the hash from the URL
+		var hash = window.location.hash;
+		if (hash) {
+			// Remove the # symbol
+			hash = hash.substring(1);
+
+			// Scroll to the element
+			const element = document.getElementById(hash);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, []);
+	{
+		new Date().getFullYear();
+	}
+
+	// Scroll to the element with the ID in the URL hash when the hash changes
 	useEffect(() => {
 		window.addEventListener('scroll', onScroll);
 		return () => window.removeEventListener('scroll', onScroll);
