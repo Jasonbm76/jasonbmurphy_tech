@@ -1,13 +1,15 @@
 import React from 'react';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Link from '@mui/material/Link';
-import { CardActionArea } from '@mui/material';
-import { Stack } from '@mui/material';
+
 import Slider from 'react-slick';
+
+import Card from '@mui/material/Card';
+import Link from '@mui/material/Link';
+import { Stack } from '@mui/material';
+import Typography from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import { CardActionArea } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

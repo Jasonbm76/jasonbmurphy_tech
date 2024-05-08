@@ -1,15 +1,20 @@
-import '../../scss/header.scss';
+import React from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+
 import { motion } from 'framer-motion';
+import { isMobile } from 'react-device-detect';
+import { Sling as Hamburger } from 'hamburger-react';
+
 import Link from '@mui/material/Link';
+import { Box } from '@chakra-ui/react';
+import Divider from '@mui/material/Divider';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { Box } from '@chakra-ui/react';
-import React from 'react';
-import { Sling as Hamburger } from 'hamburger-react';
-import { useContext, useEffect, useRef, useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import Divider from '@mui/material/Divider';
+
 import { ThemeContext } from '../../context/ThemeContext';
+
+import '../../scss/header.scss';
 
 const Links = ['about', 'resume', 'projects', 'skills', 'contact'];
 
@@ -44,12 +49,15 @@ const Header: React.FC = () => {
 
 			prevScrollPos > currScrollPos
 				? (currHeaderElement.style.transform = 'translateY(0)')
-				: (currHeaderElement.style.transform = 'translateY(-200px)');
+				: (currHeaderElement.style.transform = 'translateY(-200px');
 
 			prevScrollPos = currScrollPos;
 		};
 
-		window.addEventListener('scroll', handleScroll);
+		// Only add the scroll event listener if the user is not on a mobile device
+		if (!isMobile) {
+			window.addEventListener('scroll', handleScroll);
+		}
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);

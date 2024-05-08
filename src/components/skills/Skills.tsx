@@ -1,6 +1,7 @@
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Box';
 import Skillbar from 'react-skillbars';
+
+import Typography from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 
 import '../../scss/skills.scss';
 

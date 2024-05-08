@@ -1,22 +1,24 @@
-import '../../scss/main.scss';
-
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
+
 import { motion, useInView } from 'framer-motion';
+
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 import Home from '../home/Home';
-import Header from '../header/Header';
-import SidebarHome from '../sidebars/SidebarHome';
 import About from '../about/About';
-import Contact from '../contact/Contact';
-import Projects from '../projects/Projects';
+import Header from '../header/Header';
 import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
+import Contact from '../contact/Contact';
+import Projects from '../projects/Projects';
+import SidebarHome from '../sidebars/SidebarHome';
 import SidebarResume from '../sidebars/SidebarResume';
+
+import '../../scss/main.scss';
 
 const Main: React.FC = () => {
 	const refHome = useRef(null);

@@ -1,9 +1,9 @@
-import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { HStack, Flex, Spacer } from '@chakra-ui/react';
+import { Flex, HStack, Spacer } from '@chakra-ui/react';
 
 import '../../scss/home.scss';
 

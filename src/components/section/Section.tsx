@@ -1,14 +1,14 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-import Header from '../header/Header';
 import Home from '../home/Home';
-import SidebarHome from '../sidebars/SidebarHome';
 import About from '../about/About';
-import Contact from '../contact/Contact';
-import Projects from '../projects/Projects';
+import Header from '../header/Header';
 import Resume from '../resume/Resume';
 import Skills from '../skills/Skills';
+import Contact from '../contact/Contact';
+import Projects from '../projects/Projects';
+import SidebarHome from '../sidebars/SidebarHome';
 import SidebarResume from '../sidebars/SidebarResume';
 
 const Section: React.FC = (sectionId) => {

@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+
 import validator from 'validator';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Textarea from '@mui/joy/Textarea';
-import Snackbar from '@mui/material/Snackbar';
+import emailjs from '@emailjs/browser';
 import Alert from '@mui/material/Alert';
+import Textarea from '@mui/joy/Textarea';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Snackbar from '@mui/material/Snackbar';
+import TextField from '@mui/material/TextField';
 
 import '../../scss/contact.scss';
 
