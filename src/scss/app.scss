@@ -1,3 +1,5 @@
+@use 'themes' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
@@ -13,9 +15,9 @@ html {
 }
 
 #root {
-	color: #3c3b3b;
+	color: var(--color);
 }
 
 body {
-	background-color: #f4f5f5;
+	background-color: var(--background-color);
 }

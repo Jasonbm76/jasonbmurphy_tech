@@ -1,0 +1,37 @@
+@use 'colors' as *;
+
+#root {
+	--input-bg-color: #{$light-200};
+}
+
+html[data-theme='dark'] {
+	--background-color: #{$dark-800};
+	--header-bg-color: #{$dark-600};
+	--section-bg-color: #{$dark-section-content-bg};
+
+	--color: #{$dark-text};
+	--text-link-color: #{$dark-text-link-color};
+	--text-link-color-hover: #{$dark-text-link-color-hover};
+	--header-text-color: #{$dark-header-text};
+	--top-nav-text-color: #{$dark-nav-text};
+	--top-nav-text-color-hover: #{$dark-nav-text-hover};
+	--progress-bar-color: #{$dark-progress-bg};
+	--divider-color: #{$dark-divider-color};
+	--name-header-color: #{$purple-300};
+}
+
+html[data-theme='light'] {
+	--background-color: #{$light-300};
+	--header-bg-color: #{$light-200};
+	--section-bg-color: #{$light-section-content-bg};
+
+	--color: #{$light-text};
+	--text-link-color: #{$light-text-link-color};
+	--text-link-color-hover: #{$light-text-link-color-hover};
+	--header-text-color: #{$light-header-text};
+	--top-nav-text-color: #{$light-nav-text};
+	--top-nav-text-color-hover: #{$light-nav-text-hover};
+	--progress-bar-color: #{$light-progress-bg};
+	--divider-color: #{$light-divider-color};
+	--name-header-color: #{$purple-600};
+}

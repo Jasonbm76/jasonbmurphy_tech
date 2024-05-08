@@ -1,7 +1,7 @@
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Box';
 
-import './about.scss';
+import '../../scss/about.scss';
 
 const About: React.FC = () => {
 	return (

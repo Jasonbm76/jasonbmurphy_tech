@@ -2,7 +2,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Box';
 import Skillbar from 'react-skillbars';
 
-import './skills.scss';
+import '../../scss/skills.scss';
 
 const Skills: React.FC = () => {
 	// , color: { bar: '#388e3c' }

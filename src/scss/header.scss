@@ -1,16 +1,18 @@
+@use 'themes' as *;
+
 header {
 	width: 100%;
 	min-width: 350px;
 	display: flex;
 	align-items: center;
-	background-color: #fefeff;
+	background-color: var(--header-bg-color);
 	border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 	padding: 0;
 	margin: 0;
 	font-optical-sizing: auto;
 	font-size: 12px;
 	letter-spacing: 5px;
-	color: #3c3b3b;
+	color: var(--color);
 	position: absolute;
 	top: 5px;
 
@@ -49,7 +51,7 @@ header {
 	.topNav {
 		margin-left: auto;
 		margin-right: 30px;
-		color: #646464;
+		color: var(--top-nav-text-color);
 		letter-spacing: 3px;
 		font-weight: normal;
 
@@ -70,7 +72,7 @@ header {
 				bottom: 0;
 				right: 0;
 				border-left: solid 1px rgba(0, 0, 0, 0.2);
-				background-color: #fefeff;
+				background-color: var(--header-bg-color);
 				padding: 10px 15px;
 
 				ul {
@@ -107,25 +109,25 @@ header {
 
 					a {
 						padding: 0;
-						color: inherit;
+						color: var(--top-nav-text-color);
 						line-height: 55px;
 						height: 100%;
 						display: flex;
 						align-items: center;
 
 						&:hover {
-							color: #2e59ba;
+							color: var(--top-nav-text-color-hover);
 							font-weight: 500;
 						}
 					}
 				}
 
 				a.homeIcon {
-					color: #989898;
+					color: var(--top-nav-text-color);
 					display: flex;
 
 					&:hover {
-						color: #2e59ba;
+						color: var(--top-nav-text-color-hover);
 					}
 
 					svg {

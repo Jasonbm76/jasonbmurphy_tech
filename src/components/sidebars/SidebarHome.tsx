@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Box';
 
-import './sidebar.scss';
+import '../../scss/sidebar.scss';
 
 const Sidebar: React.FC = () => {
 	return (

@@ -1,0 +1,9 @@
+@use 'themes' as *;
+
+form {
+	margin-top: 30px;
+}
+
+input {
+	background-color: var(--input-bg-color) !important;
+}

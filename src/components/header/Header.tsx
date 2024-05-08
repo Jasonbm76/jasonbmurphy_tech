@@ -1,13 +1,15 @@
-import './header.scss';
+import '../../scss/header.scss';
 import { motion } from 'framer-motion';
-//import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { Sling as Hamburger } from 'hamburger-react';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import Divider from '@mui/material/Divider';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Links = ['about', 'resume', 'projects', 'skills', 'contact'];
 
@@ -16,9 +18,21 @@ const Spacer = () => {
 };
 
 const Header: React.FC = () => {
+	const { lightTheme, toggleTheme } = useContext(ThemeContext);
 	const [isOpen, setOpen] = useState(false);
 	const headerRef = useRef(null);
 
+	// Set the theme based on the user's system preferences
+	const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+	const defaultColorScheme = darkThemeMq.matches ? 'dark' : 'light';
+	const toggleColorScheme = darkThemeMq.matches ? 'light' : 'dark';
+
+	// Set the theme based on the darkTheme state
+	useEffect(() => {
+		document.documentElement.setAttribute('data-theme', lightTheme ? defaultColorScheme : toggleColorScheme);
+	}, [lightTheme]);
+
+	// Hide the header when scrolling down and show it when scrolling up
 	useEffect(() => {
 		let prevScrollPos = window.scrollY;
 
@@ -42,6 +56,7 @@ const Header: React.FC = () => {
 		};
 	}, []);
 
+	// Close the mobile menu when a link is clicked
 	const handleClick = () => {
 		setOpen(false);
 	};
@@ -138,7 +153,7 @@ const Header: React.FC = () => {
 							whileTap={{ scale: 0.9 }}>
 							<Link
 								href='#'
-								title='Home'
+								title='HOME'
 								className='homeIcon'>
 								<HomeOutlinedIcon />
 							</Link>
@@ -154,6 +169,26 @@ const Header: React.FC = () => {
 								<Spacer key={`spacer-${index}`} />
 							</React.Fragment>
 						))}
+						<Spacer />
+						<motion.li
+							whileHover={{
+								scale: 1,
+								y: -5,
+								transition: { duration: 0.5 },
+							}}
+							whileTap={{ scale: 0.9 }}>
+							<Link
+								href='#'
+								title={
+									lightTheme
+										? `TOGGLE ${toggleColorScheme.toLocaleUpperCase()} MODE`
+										: `TOGGLE ${defaultColorScheme.toLocaleUpperCase()} MODE`
+								}
+								className='themeIcon'
+								onClick={toggleTheme}>
+								{lightTheme ? <LightModeIcon /> : <DarkModeIcon />}
+							</Link>
+						</motion.li>
 					</motion.ul>
 				</div>
 			</header>

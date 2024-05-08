@@ -1,4 +1,4 @@
-import './sidebar.scss';
+import '../../scss/sidebar.scss';
 
 const SidebarResume: React.FC = () => {
 	return (

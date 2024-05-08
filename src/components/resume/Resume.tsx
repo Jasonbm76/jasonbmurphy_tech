@@ -2,7 +2,7 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Box';
 
-import './resume.scss';
+import '../../scss/resume.scss';
 
 const resumeBulletPoints = [
 	[

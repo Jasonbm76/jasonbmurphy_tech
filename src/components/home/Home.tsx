@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { HStack, Flex, Spacer } from '@chakra-ui/react';
 
-import './home.scss';
+import '../../scss/home.scss';
 
 const socials = [
 	{

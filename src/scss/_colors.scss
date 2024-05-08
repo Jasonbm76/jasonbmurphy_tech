@@ -1,0 +1,57 @@
+/*** Common Colors ***/
+$white: #ffffff;
+$black: #000000;
+
+$dark-100: #d4d3e0;
+$dark-200: #a9a7c0;
+$dark-300: #7f7ba1;
+$dark-400: #544f81;
+$dark-500: #292362;
+$dark-600: #211c4e;
+$dark-700: #19153b;
+$dark-800: #100e27;
+$dark-900: #080714;
+
+$light-100: #fdfdfd;
+$light-200: #fbfbfb;
+$light-300: #f8f9f9;
+$light-400: #f6f7f7;
+$light-500: #f4f5f5;
+$light-600: #c3c4c4;
+$light-700: #929393;
+$light-800: #626262;
+$light-900: #313131;
+
+$purple-100: #ddd8eb;
+$purple-200: #bbb1d7;
+$purple-300: #998ac2;
+$purple-400: #7763ae;
+$purple-500: #553c9a;
+$purple-600: #44307b;
+$purple-700: #33245c;
+$purple-800: #22183e;
+$purple-900: #110c1f;
+
+/*** Dark Theme Colors ***/
+
+$dark-text: $white;
+$dark-text-link-color: $white;
+$dark-text-link-color-hover: $purple-300;
+$dark-header-text: $white;
+$dark-nav-text: $white;
+$dark-nav-text-hover: $purple-300;
+$dark-section-content-bg: $purple-800;
+$dark-progress-bg: $purple-400;
+$dark-divider-color: rgba($dark-100, 0.3);
+
+/*** Light Theme Colors ***/
+
+$light-text: $light-900;
+$light-text-link-color: $light-900;
+$light-text-link-color-hover: $purple-600;
+$light-header-text: $purple-500;
+$light-nav-text: $light-800;
+$light-nav-text-hover: $purple-500;
+$light-section-content-bg: $white;
+$light-progress-bg: $purple-400;
+$light-divider-color: rgba($light-800, 0.3);

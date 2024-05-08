@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
-//import { useForm } from 'react-hook-form';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -13,7 +12,7 @@ import Textarea from '@mui/joy/Textarea';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-import './contact.scss';
+import '../../scss/contact.scss';
 
 const Contact: React.FC = () => {
 	const form = useRef();
@@ -120,6 +119,7 @@ const Contact: React.FC = () => {
 							id='name'
 							label='Name'
 							value={name}
+							variant='filled'
 						/>
 					</Grid>
 					<Grid
@@ -137,6 +137,7 @@ const Contact: React.FC = () => {
 							onChange={(e) => validateEmail(e)}
 							error={!emailValid}
 							helperText={emailValid ? '' : response}
+							variant='filled'
 						/>
 					</Grid>
 					<Grid

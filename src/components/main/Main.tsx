@@ -1,4 +1,4 @@
-import './main.scss';
+import '../../scss/main.scss';
 
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
@@ -64,9 +64,6 @@ const Main: React.FC = () => {
 			}
 		}
 	}, []);
-	{
-		new Date().getFullYear();
-	}
 
 	// Scroll to the element with the ID in the URL hash when the hash changes
 	useEffect(() => {

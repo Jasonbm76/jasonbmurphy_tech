@@ -1,0 +1,93 @@
+@use 'themes' as *;
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h2 {
+		margin-top: 1em;
+		color: var(--name-header-color);
+	}
+
+	h6 {
+	}
+
+	.briefly {
+		margin-top: 30px;
+	}
+
+	.briefly-content {
+		letter-spacing: 0;
+
+		@media (max-width: 899px) {
+			font-size: 14px;
+		}
+	}
+
+	.email-info {
+		display: flex;
+		align-items: center;
+	}
+
+	.email-icon {
+		width: 15px !important;
+		margin-right: 10px;
+	}
+
+	.email-link {
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+	}
+
+	.learn-more {
+		max-width: 150px;
+		font-size: 10px !important;
+		padding: 10px !important;
+		margin-top: 15px !important;
+	}
+
+	.resume-body {
+		background-color: transparent;
+		border: none;
+		max-width: 200px;
+		opacity: 0.5;
+		display: none;
+
+		@media (min-width: 900px) {
+			display: block;
+		}
+
+		&:hover {
+			opacity: 1;
+			transition: opacity 1s;
+		}
+
+		a {
+			border: none !important;
+			text-decoration: none;
+		}
+	}
+
+	.resume-body-text {
+		font-size: 12px;
+	}
+
+	.resume-img {
+		width: auto;
+		height: 300px;
+	}
+
+	.photo {
+		width: 160px;
+		height: 160px;
+
+		img {
+			width: 160px;
+			height: 160px;
+			border-radius: 50%;
+			display: block;
+			width: 10em;
+		}
+	}
+}

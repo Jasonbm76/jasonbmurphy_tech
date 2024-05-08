@@ -1,12 +1,14 @@
+@use 'themes' as *;
+
 a {
 	text-decoration: none;
-	color: inherit;
+	color: var(--text-link-color);
 	word-wrap: none;
 	white-space: nowrap;
 }
 
 a:hover {
-	color: #2e59ba !important;
+	color: var(--text-link-color-hover);
 }
 
 h1,
@@ -29,17 +31,21 @@ h1 {
 h1,
 h2 {
 	letter-spacing: 6px;
-	color: #553c9a;
-	background-image: linear-gradient(to top, #2a225d, #8277cb);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: var(--header-text-color);
+	// background-image: linear-gradient(to top, #2a225d, #8277cb);
+	// background-clip: text;
+	// -webkit-background-clip: text;
+	// -webkit-text-fill-color: transparent;
+}
+
+hr {
+	border-color: var(--divider-color) !important;
 }
 
 p {
 	font-weight: 400;
 	line-height: 1.5em;
-	color: #989898;
+	color: inherit;
 	font-size: 13px;
 
 	@media (max-width: 899px) {
@@ -109,7 +115,7 @@ p {
 
 .progressMainStyle {
 	height: 5px;
-	background-color: #5abfc6;
+	background-color: var(--progress-bar-color);
 	width: 0;
 }
 
@@ -134,7 +140,6 @@ section {
 
 		a {
 			border-bottom: 1px dotted #a0a0a0a6;
-			color: inherit;
 			text-decoration: none;
 			transition: color 0.2s ease, border-bottom-color 0.2s ease;
 
@@ -154,7 +159,7 @@ section {
 		}
 
 		.sectionContent-right {
-			background-color: white;
+			background-color: var(--section-bg-color);
 			border: solid 1px rgba(0, 0, 0, 0.1);
 			padding: 50px 20px;
 			display: flex;
